@@ -11,7 +11,7 @@ header{
 }
 
 main{
-  padding-left: 2em;
+  padding: 2em;
 }
 
 .container{
@@ -22,6 +22,22 @@ main{
   display: none;
 }
 
+.item{
+  background-color: white;
+  border-radius: 6px;
+  width: 12em;
+  height: 10em;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+.item img{
+  height: 75%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
 .logo-first{
   font-weight: bolder;
 }
@@ -30,6 +46,10 @@ main{
   font-weight: lighter;
   font-style: italic;
   color: #ccc;
+}
+
+.show{
+  display: inline-block;
 }
 
 .sidebar{
