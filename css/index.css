@@ -1,0 +1,62 @@
+body{
+  background-color: tan;
+}
+
+header{
+  background-color: green;
+  color: white;
+  padding: 1em;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+main{
+  padding-left: 2em;
+}
+
+.container{
+  display: flex;
+}
+
+.hidden{
+  display: none;
+}
+
+.logo-first{
+  font-weight: bolder;
+}
+
+.logo-second{
+  font-weight: lighter;
+  font-style: italic;
+  color: #ccc;
+}
+
+.sidebar{
+  width: 20%;
+}
+
+.switch-field {
+  font-family: sans-serif;
+}
+
+.switch-field label {
+  display: block;
+  width: 5em;
+  background-color: #ccc;
+  text-align: center;
+  padding: 1em;
+  user-select: none;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #A5DC86;
+}
+
+.switch-field input[type='radio']{
+  display: none;
+}
