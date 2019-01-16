@@ -24,22 +24,6 @@
         padding-left: 2em;
       }
 
-      nav {
-        background-color: gold;
-        width: 20%;
-      }
-
-      nav ul{
-        list-style-type: none;
-      }
-
-      nav ul li{
-        font-size: 1.2rem;
-        font-family: sans-serif;
-        font-weight: bold;
-        font-style: italic;
-      }
-
       .container{
         display: flex;
       }
@@ -53,26 +37,61 @@
         font-style: italic;
         color: #ccc;
       }
-    </style> 
+
+      .sidebar{
+        width: 20%;
+      }
+
+      .switch-field {
+        font-family: sans-serif;
+      }
+
+      .switch-field label {
+        display: block;
+        width: 5em;
+        background-color: #ccc;
+        text-align: center;
+        padding: 1em;
+        user-select: none;
+      }
+
+      .switch-field label:hover {
+        cursor: pointer;
+      }
+
+      .switch-field input:checked + label {
+        background-color: #A5DC86;
+      }
+      
+      .switch-field input[type='radio']{
+        display: none;
+      }
+
+   </style> 
   </head>
 
   <body>
     <header><span class="logo-first">Grocery</span><span class="logo-second">Works</span></header>
     <div class="container">
-      <nav>
-        <ul>
-          <li>Beans</li>
-          <li>Nuts</li>
-          <li>Pasta</li>
-          <li>Produce</li>
-        </ul>
-      </nav>
-
+      <div class="sidebar">
+        <form>
+          <div class="switch-field">
+            <input type="radio" id="beans" name="item-filter" value="beans" checked/>
+            <label for="beans">Beans</label>
+            <input type="radio" id="nuts" name="item-filter" value="nuts" />
+            <label for="nuts">Nuts</label>
+            <input type="radio" id="pasta" name="item-filter" value="pasta" />
+            <label for="pasta">Pasta</label>
+            <input type="radio" id="produce" name="item-filter" value="produce" />
+            <label for="produce">Produce</label>
+          </div>
+        </form>
+      </div>
+ 
       <main>
-      <p>Food goes here</p> 
+        <p>Food goes here</p> 
       </main>
     </div> 
-    
   </body>
 </html>
 
