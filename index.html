@@ -9,12 +9,39 @@
     <meta name="keywords" content="">
 
     <style>
+      body{
+        background-color: tan;
+      }
       header{
-        background-color: blue;
+        background-color: green;
         color: white;
         padding: 1em;
         font-size: 2rem;
         font-family: sans-serif;
+      }
+
+      main{
+        padding-left: 2em;
+      }
+
+      nav {
+        background-color: gold;
+        width: 20%;
+      }
+
+      nav ul{
+        list-style-type: none;
+      }
+
+      nav ul li{
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      .container{
+        display: flex;
       }
 
       .logo-first{
@@ -31,8 +58,21 @@
 
   <body>
     <header><span class="logo-first">Grocery</span><span class="logo-second">Works</span></header>
-    <main>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>Beans</li>
+          <li>Nuts</li>
+          <li>Pasta</li>
+          <li>Produce</li>
+        </ul>
+      </nav>
+
+      <main>
+      <p>Food goes here</p> 
+      </main>
+    </div> 
     
-    </main>
   </body>
 </html>
+
