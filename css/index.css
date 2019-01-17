@@ -18,6 +18,31 @@ main{
   display: flex;
 }
 
+.cart{
+  flex: 0 0 15%;
+  background-color: #ccc;
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+.cart table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart .money{
+  text-align: right;
+}
+
+.total-row td{
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+
+.item-row td{
+  font-style: italic;
+}
+
 .item{
   display: none;
   background-color: white;
@@ -34,6 +59,15 @@ main{
   object-fit: contain;
   border-radius: 6px;
   border: 1px solid #ccc;
+  user-select: none;
+}
+
+.item input[type='checkbox']{
+  display: none;
+}
+
+.item p{
+  user-select: none;
 }
 
 .logo-first{

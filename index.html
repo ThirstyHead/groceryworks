@@ -16,26 +16,27 @@
       <span class="logo-first">Grocery</span><span class="logo-second">Works</span>
     </header>
     <div class="container">
+      <!-- Sidebar -->
       <div class="sidebar">
-        <form>
-          <div class="switch-field">
-            <input type="radio" id="beans" name="item-filter" value="beans" checked/>
-            <label for="beans">Beans</label>
-            <input type="radio" id="nuts" name="item-filter" value="nuts" />
-            <label for="nuts">Nuts</label>
-            <input type="radio" id="pasta" name="item-filter" value="pasta" />
-            <label for="pasta">Pasta</label>
-            <input type="radio" id="produce" name="item-filter" value="produce" />
-            <label for="produce">Produce</label>
-          </div>
-        </form>
+        <div class="switch-field">
+          <input type="radio" id="beans" name="item-filter" value="beans" checked/>
+          <label for="beans">Beans</label>
+          <input type="radio" id="nuts" name="item-filter" value="nuts" />
+          <label for="nuts">Nuts</label>
+          <input type="radio" id="pasta" name="item-filter" value="pasta" />
+          <label for="pasta">Pasta</label>
+          <input type="radio" id="produce" name="item-filter" value="produce" />
+          <label for="produce">Produce</label>
+        </div>
       </div>
  
+      <!-- Main -->
       <main>
-        <div class="item" data-category="beans">
+        <label class="item" data-category="beans">
+          <input type="checkbox" value="flax-seeds">
           <img src="img/beans/flax-seeds.jpg">
           <p>Flax Seeds</p>
-        </div>
+        </label>
         <div class="item" data-category="beans">
           <img src="img/beans/french-green-lentils.jpg">
           <p>French Green Lentils</p>
@@ -212,6 +213,33 @@
         </div>
 
       </main>
+
+      <!-- Shopping Cart -->
+      <div class="cart">
+        <h2>Your Order</h2>
+        <table>
+          <tr class="total-row">
+            <td>Total</td>
+            <td class="money">$54.95</td>
+          </tr>
+
+          <tr class="item-row">
+            <td colspan="2">Flax Seeds</td>
+          </tr> 
+          <tr>
+            <td>0.5 lbs</td>
+            <td class="money">$0.99</td>
+          </tr>
+
+          <tr class="item-row">
+            <td colspan="2">Jasmine Rice</td>
+          </tr> 
+          <tr>
+            <td>20 lbs</td>
+            <td class="money">$14.99</td>
+          </tr>
+        </table>
+
     </div> 
   </body>
 </html>
