@@ -36,6 +36,7 @@ main{
   height: 75%;
   object-fit: contain;
   border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 .logo-first{
