@@ -66,6 +66,16 @@ main{
   display: none;
 }
 
+.item input[type='checkbox']:checked ~ p{
+  font-weight: bold;
+  font-style: italic;
+  color: green;
+}
+
+.item input[type='checkbox']:checked ~ p:after{
+  content: " \02713 ";
+}
+
 .item p{
   user-select: none;
 }
