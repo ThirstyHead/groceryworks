@@ -21,11 +21,9 @@ function addFilter(filter){
   for(let i=0; i<allItems.length; i++){
     let item = allItems[i];
     if(item.dataset.category === filter){
-      item.classList.remove('hidden');
       item.classList.add('show');
     }else{
       item.classList.remove('show');
-      item.classList.add('hidden');
     }
   }
 }

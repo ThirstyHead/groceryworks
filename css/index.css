@@ -18,11 +18,8 @@ main{
   display: flex;
 }
 
-.hidden{
-  display: none;
-}
-
 .item{
+  display: none;
   background-color: white;
   border-radius: 6px;
   width: 12em;
