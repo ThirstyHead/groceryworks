@@ -1,9 +1,12 @@
 window.addEventListener('load', init);
 
+let cart = undefined;
+
 function init(){
   addFilter(document.querySelector('input[name="item-filter"]:checked').value);
   enableItemFilter();  
   enableAddToCart();
+  cart = [];
 }
 
 // ======================
@@ -43,9 +46,22 @@ function enableAddToCart(){
 }
 
 function handleAddToCartEvent(event){
-  addToCart(event.srcElement.value);        
+  let item = event.srcElement.value;
+  if(event.srcElement.checked){
+    addToCart(item);
+  }else{
+    removeFromCart(item);
+  }
 }
 
 function addToCart(item){
-  console.log(item);
+  cart.push(item);
+  console.dir(cart);
+}
+
+function removeFromCart(item){
+  cart = cart.filter( (value) => {
+    return value !== item;
+  });
+  console.dir(cart);
 }
