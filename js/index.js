@@ -1,12 +1,27 @@
 window.addEventListener('load', init);
 
-let cart = undefined;
-
 function init(){
   addFilter(document.querySelector('input[name="item-filter"]:checked').value);
   enableItemFilter();  
   enableAddToCart();
-  cart = [];
+  fetchItems();
+}
+
+// ========================
+// Fetch items from server
+// ========================
+function fetchItems(){
+  fetch('items.json')
+    .then( response => response.json() )
+    .then( json => saveItems(json) )
+    .catch( error => console.error(error) );
+}
+
+function saveItems(json){
+  sessionStorage.clear();
+  for(let i=0; i<json.items.length; i++){
+    const item = json.items[i];
+    window.sessionStorage.setItem(item.id, JSON.stringify(item)); }
 }
 
 // ======================
