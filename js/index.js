@@ -61,23 +61,21 @@ function enableAddToCart(){
 }
 
 function handleAddToCartEvent(event){
-  console.log(event.srcElement);
-  let item = event.srcElement.value;
+  const itemId = event.srcElement.value;
   if(event.srcElement.checked){
-    addToCart(item);
+    addToCart(itemId);
   }else{
-    removeFromCart(item);
+    removeFromCart(itemId);
   }
 }
 
-function addToCart(item){
-  cart.push(item);
-  console.dir(cart);
+function addToCart(itemId){
+  let cart = document.querySelector('.cart');
+  cart.classList.add('visible');
+  const item = JSON.parse(window.sessionStorage.getItem(itemId));
 }
 
-function removeFromCart(item){
-  cart = cart.filter( (value) => {
-    return value !== item;
-  });
-  console.dir(cart);
+function removeFromCart(itemId){
+  let cart = document.querySelector('.cart');
+  cart.classList.remove('visible');
 }
