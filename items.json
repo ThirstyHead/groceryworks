@@ -4,48 +4,83 @@
     "category": "beans",
     "price": 0.59,
     "unit": "lb",
-    "photo": "beans/flax-seeds.jpg"
+    "photo": "flax-seeds.jpg"
   },
   "french-green-lentils": {
     "name": "French Green Lentils",
     "category": "beans",
     "price": 0.99,
     "unit": "lb",
-    "photo": "beans/french-green-lentils.jpg"
+    "photo": "french-green-lentils.jpg"
   },
   "green-split-peas": {
     "name": "Green Split Peas",
     "category": "beans",
     "price": 0.59,
     "unit": "lb",
-    "photo": "beans/green-split-peas.jpg"
+    "photo": "green-split-peas.jpg"
   },
   "lentils": {
     "name": "Lentils",
     "category": "beans",
     "price": 0.79,
     "unit": "lb",
-    "photo": "beans/lentils.jpg"
+    "photo": "lentils.jpg"
   },
   "pinto-beans": {
     "name": "Pinto Beans",
     "category": "beans",
     "price": 0.79,
     "unit": "lb",
-    "photo": "beans/pinto-beans.jpg"
+    "photo": "pinto-beans.jpg"
   },
   "white-navy-beans": {
     "name": "Pinto Beans",
     "category": "beans",
     "price": 0.79,
     "unit": "lb",
-    "photo": "beans/white-navy-beans.jpg"
+    "photo": "white-navy-beans.jpg"
   },
   "yellow-split-peas": {
     "name": "Yellow Split Peas",
     "category": "beans",
     "price": 0.59,
     "unit": "lb",
-    "photo": "beans/yellow-split-peas.jpg"
+    "photo": "yellow-split-peas.jpg"
+  },
+  "peanuts": {
+    "name": "Peanuts",
+    "category": "nuts",
+    "price": 1.89,
+    "unit": "lb",
+    "photo": "peanuts.jpg"
+  },
+  "pistachios": {
+    "name": "Pistachios",
+    "category": "nuts",
+    "price": 9.99,
+    "unit": "lb",
+    "photo": "pistachios.jpg"
+  },
+  "roasted-cashews": {
+    "name": "Roasted Cashews",
+    "category": "nuts",
+    "price": 12.89,
+    "unit": "lb",
+    "photo": "roasted-cashews.jpg"
+  },
+  "sunflower-seeds": {
+    "name": "Sunflower Seeds",
+    "category": "nuts",
+    "price": 1.49,
+    "unit": "lb",
+    "photo": "sunflower-seeds.jpg"
+  },
+  "toasted-pumpkin-seeds": {
+    "name": "Toasted Pumpkin Seeds",
+    "category": "nuts",
+    "price": 2.99,
+    "unit": "lb",
+    "photo": "sunflower-seeds.jpg"
   },
 ]
