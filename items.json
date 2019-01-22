@@ -1,0 +1,51 @@
+[
+  "flax-seeds": {
+    "name": "Flax Seeds",
+    "category": "beans",
+    "price": 0.59,
+    "unit": "lb",
+    "photo": "beans/flax-seeds.jpg"
+  },
+  "french-green-lentils": {
+    "name": "French Green Lentils",
+    "category": "beans",
+    "price": 0.99,
+    "unit": "lb",
+    "photo": "beans/french-green-lentils.jpg"
+  },
+  "green-split-peas": {
+    "name": "Green Split Peas",
+    "category": "beans",
+    "price": 0.59,
+    "unit": "lb",
+    "photo": "beans/green-split-peas.jpg"
+  },
+  "lentils": {
+    "name": "Lentils",
+    "category": "beans",
+    "price": 0.79,
+    "unit": "lb",
+    "photo": "beans/lentils.jpg"
+  },
+  "pinto-beans": {
+    "name": "Pinto Beans",
+    "category": "beans",
+    "price": 0.79,
+    "unit": "lb",
+    "photo": "beans/pinto-beans.jpg"
+  },
+  "white-navy-beans": {
+    "name": "Pinto Beans",
+    "category": "beans",
+    "price": 0.79,
+    "unit": "lb",
+    "photo": "beans/white-navy-beans.jpg"
+  },
+  "yellow-split-peas": {
+    "name": "Yellow Split Peas",
+    "category": "beans",
+    "price": 0.59,
+    "unit": "lb",
+    "photo": "beans/yellow-split-peas.jpg"
+  },
+]

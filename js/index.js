@@ -46,6 +46,7 @@ function enableAddToCart(){
 }
 
 function handleAddToCartEvent(event){
+  console.log(event.srcElement);
   let item = event.srcElement.value;
   if(event.srcElement.checked){
     addToCart(item);
