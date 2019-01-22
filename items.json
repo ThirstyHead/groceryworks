@@ -83,4 +83,53 @@
     "unit": "lb",
     "photo": "sunflower-seeds.jpg"
   },
+  "egg-noodles": {
+    "name": "Egg Noodles",
+    "category": "pasta",
+    "price": 0.79,
+    "unit": "lb",
+    "photo": "egg-noodles.jpg"
+  },
+  "jasmine-rice": {
+    "name": "Jasmine Rice",
+    "category": "pasta",
+    "price": 0.79,
+    "unit": "lb",
+    "photo": "jasmine-rice.jpg"
+  },
+  "macaroni": {
+    "name": "Macaroni",
+    "category": "pasta",
+    "price": 0.49,
+    "unit": "lb",
+    "photo": "macaroni.jpg"
+  },
+  "mini-shells": {
+    "name": "Mini Shells",
+    "category": "pasta",
+    "price": 0.49,
+    "unit": "lb",
+    "photo": "mini-shells.jpg"
+  },
+  "penne": {
+    "name": "Penne",
+    "category": "pasta",
+    "price": 0.49,
+    "unit": "lb",
+    "photo": "penne.jpg"
+  },
+  "rotini": {
+    "name": "Rotini",
+    "category": "pasta",
+    "price": 0.49,
+    "unit": "lb",
+    "photo": "rotini.jpg"
+  },
+  "short-grain-brown-rice": {
+    "name": "Short Grain Brown Rice",
+    "category": "pasta",
+    "price": 0.79,
+    "unit": "lb",
+    "photo": "short-grain-brown-rice.jpg"
+  },
 ]
