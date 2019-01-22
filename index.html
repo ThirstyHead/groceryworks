@@ -387,28 +387,32 @@
 
       <!-- Shopping Cart -->
       <div class="cart">
-        <h2>Your Order</h2>
         <table>
-          <tr class="total-row">
-            <td>Total</td>
-            <td class="money">$54.95</td>
-          </tr>
+          <caption>Your Order</caption>
+          <thead>
+            <tr>
+              <td>Total</td>
+              <td id="cart-total">$54.95</td>
+            </tr>
+          </thead> 
 
-          <tr class="item-row">
-            <td colspan="2">Flax Seeds</td>
-          </tr> 
-          <tr>
-            <td>0.5 lbs</td>
-            <td class="money">$0.99</td>
-          </tr>
+          <tbody>
+            <tr data-id="flax-seeds">
+              <td colspan="2">Flax Seeds</td>
+            </tr> 
+            <tr data-id="flax-seeds">
+              <td>0.5 lbs</td>
+              <td class="item-total">$0.99</td>
+            </tr>
 
-          <tr class="item-row">
-            <td colspan="2">Jasmine Rice</td>
-          </tr> 
-          <tr>
-            <td>20 lbs</td>
-            <td class="money">$14.99</td>
-          </tr>
+            <tr data-id="jasmine-rice">
+              <td colspan="2">Jasmine Rice</td>
+            </tr> 
+            <tr data-id="jasmine-rice">
+              <td>20 lbs</td>
+              <td class="item-total">$14.99</td>
+            </tr>
+          </tbody>
         </table>
 
     </div> 

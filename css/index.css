@@ -2,6 +2,12 @@ body{
   background-color: tan;
 }
 
+caption{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
 header{
   background-color: green;
   color: white;
@@ -31,17 +37,17 @@ main{
   border-collapse: collapse;
 }
 
-.cart .money{
-  text-align: right;
-}
-
-.total-row td{
+.cart thead td{
   padding-bottom: 1em;
   font-weight: bold;
 }
 
-.item-row td{
+.cart tbody{
   font-style: italic;
+}
+
+#cart-total, .item-total{  
+  text-align: right;
 }
 
 .item{
