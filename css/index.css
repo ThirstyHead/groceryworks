@@ -48,7 +48,7 @@ main{
   background-color: white;
   border-radius: 6px;
   width: 12em;
-  height: 10em;
+  height: 11em;
   padding: 1em;
   margin: 1em;
   text-align: center;
@@ -78,6 +78,11 @@ main{
 
 .item p{
   user-select: none;
+}
+
+.item .price::before{
+  content: '';
+  display: block;
 }
 
 .logo-first{
