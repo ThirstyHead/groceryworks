@@ -3,7 +3,7 @@ body{
 }
 
 caption{
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 1em;
 }
@@ -12,7 +12,7 @@ header{
   background-color: green;
   color: white;
   padding: 1em;
-  font-size: 2rem;
+  font-size: 2em;
   font-family: sans-serif;
 }
 
