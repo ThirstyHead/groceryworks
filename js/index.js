@@ -89,6 +89,7 @@ function addToCart(itemId){
   
   let tbody = document.querySelector('.cart tbody');
   tbody.appendChild(itemNode);
+  updateTotal();
 }
 
 function populateTemplate(node, selector, value){
@@ -96,6 +97,20 @@ function populateTemplate(node, selector, value){
   for(let i=0; i<results.length; i++){
     results[i].textContent = value;
   }
+}
+
+function updateTotal(){
+  let total = 0;
+  const itemTotals = document.querySelectorAll('.cart .item-total');
+  for(let i=0; i<itemTotals.length; i++){
+    let parts = itemTotals[i].innerText.split('$');
+    let itemTotal = Number(parts[1]);
+    total += itemTotal;
+  }
+  
+  let cartTotal = document.querySelector('#cart-total');
+  let currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+  cartTotal.innerHTML = currency.format(total);
 }
 
 function removeFromCart(itemId){
