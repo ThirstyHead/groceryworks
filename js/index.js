@@ -131,7 +131,7 @@ function updateTotal(){
     total += itemTotal;
   }
   
-  let cartTotal = document.querySelector('#cart-total');
+  let cartTotal = document.querySelector('.cart-total');
   let currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
   cartTotal.innerHTML = currency.format(total);
 }

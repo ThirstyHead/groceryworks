@@ -56,7 +56,7 @@ main{
   text-align: left;
 }
 
-#cart-total, .item-total{  
+.cart-total, .item-total{  
   text-align: right;
 }
 
