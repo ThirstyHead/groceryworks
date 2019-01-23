@@ -56,17 +56,19 @@ main{
   text-align: left;
 }
 
-.cart-total, .item-total{  
+.cart .cart-total, .item-total{  
   text-align: right;
+}
+
+#checkout-dialog{
+  height: 75%;
+  width: 50%;
 }
 
 #checkout-dialog::backdrop, #checkout-dialog + .backdrop{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#checkout-dialog header{
-  padding: 0.5em;  
-}
 #checkout-dialog button{
   font-size: 0.5em;
   border-radius: 6px;
@@ -74,10 +76,14 @@ main{
   box-shadow: 1px 1px 5px black;
 }
 
-.dialog-buttons{
-  display: inline-block;
-  float: right;
-  text-align: right;
+#checkout-dialog header{
+  padding: 0.25em;
+  margin-bottom: 1em;
+}
+
+.dialog-body{
+  max-height: 75%;
+  overflow-y: auto;
 }
 
 .item{

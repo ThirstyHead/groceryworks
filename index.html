@@ -399,7 +399,7 @@
       <!-- Shopping Cart -->
       <div class="cart">
         <button class="purchase-button">Purchase</button>
-        <table>
+        <table class="cart-table">
           <caption>Your Order</caption>
           <thead>
             <tr>
@@ -414,13 +414,15 @@
 
         <dialog id="checkout-dialog">
         <header>
-          Your Order
           <span class="dialog-buttons">
             <button id="place-order-button">Place Order</button>
             <button id="cancel-order-button">Cancel</button>
           </span>
         </header>
-          This order will be shipped to the address on file, using your default credit card.
+
+        <div class="dialog-body">
+        
+        </div>
         </dialog>
 
 

@@ -174,18 +174,27 @@ function enablePurchaseButtons(){
 
 function handlePurchaseEvent(event){
   let checkoutDialog = document.querySelector('#checkout-dialog');
+
+  // clone cart from sidebar
+  let cart = document.querySelector('.cart-table');
+  let dialogBody = checkoutDialog.querySelector('.dialog-body');
+  dialogBody.appendChild(cart.cloneNode(true));
   checkoutDialog.showModal();
 }
 
 function handleCancelOrderEvent(event){
   let checkoutDialog = document.querySelector('#checkout-dialog');
+  let dialogBody = checkoutDialog.querySelector('.dialog-body');
+  dialogBody.innerHTML = '';
   checkoutDialog.close('cancelled');
 }
 
 function handlePlaceOrderEvent(event){
   clearAllCheckedItems();
   removeFromCart();
-
   let checkoutDialog = document.querySelector('#checkout-dialog');
+  let dialogBody = checkoutDialog.querySelector('.dialog-body');
+  dialogBody.innerHTML = '';
+
   checkoutDialog.close('ordered');
 }
