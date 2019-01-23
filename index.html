@@ -9,7 +9,18 @@
 
     <link rel="stylesheet" href="css/index.css">
     <script defer src="js/index.js"></script>
- </head>
+
+    <!-- Used for adding items to the cart -->
+    <template id="cart-item">
+      <tr data-id="">
+        <td colspan="2" class="item-name"></td>
+      </tr> 
+      <tr data-id="">
+        <td><span class="item-amount"></span> <span class="item-unit"></span></td>
+        <td class="item-total"></td>
+      </tr>
+    </template>
+  </head>
 
   <body>
     <header>
@@ -123,7 +134,7 @@
           </p>
         </label>
         <label class="item" data-category="nuts">
-          <input type="checkbox" value="toasted-pumpkins-seeds">
+          <input type="checkbox" value="toasted-pumpkin-seeds">
           <img src="img/nuts/toasted-pumpkin-seeds.jpg">
           <p>
             Toasted Pumpkin Seeds
@@ -397,21 +408,6 @@
           </thead> 
 
           <tbody>
-            <tr data-id="flax-seeds">
-              <td colspan="2">Flax Seeds</td>
-            </tr> 
-            <tr data-id="flax-seeds">
-              <td>0.5 lbs</td>
-              <td class="item-total">$0.99</td>
-            </tr>
-
-            <tr data-id="jasmine-rice">
-              <td colspan="2">Jasmine Rice</td>
-            </tr> 
-            <tr data-id="jasmine-rice">
-              <td>20 lbs</td>
-              <td class="item-total">$14.99</td>
-            </tr>
           </tbody>
         </table>
 

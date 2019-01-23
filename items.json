@@ -42,7 +42,7 @@
     },
     {
       "id": "white-navy-beans",
-      "name": "Pinto Beans",
+      "name": "White Navy Beans",
       "category": "beans",
       "price": 0.79,
       "unit": "lb",
@@ -94,7 +94,7 @@
       "category": "nuts",
       "price": 2.99,
       "unit": "lb",
-      "photo": "sunflower-seeds.jpg"
+      "photo": "toasted-pumpkin-seeds.jpg"
     },
     {
       "id": "egg-noodles", 
@@ -197,7 +197,7 @@
       "name": "Eggplant",
       "category": "produce",
       "price": 1.49,
-      "unit": "lb",
+      "unit": "each",
       "photo": "eggplant.jpg"
     },
     {

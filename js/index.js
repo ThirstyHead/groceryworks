@@ -71,11 +71,35 @@ function handleAddToCartEvent(event){
 
 function addToCart(itemId){
   let cart = document.querySelector('.cart');
+  // TODO: conditionally display if there is an item in the cart
   cart.classList.add('visible');
+
   const item = JSON.parse(window.sessionStorage.getItem(itemId));
+  let template = document.querySelector('#cart-item');
+  let itemNode = document.importNode(template.content, true);
+  populateTemplate(itemNode, '.item-name', item.name);
+  populateTemplate(itemNode, '.item-amount', 1);
+
+  if(item.unit !== 'each'){
+    populateTemplate(itemNode, '.item-unit', item.unit);
+  }
+
+  let currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+  populateTemplate(itemNode, '.item-total', currency.format(item.price));
+  
+  let tbody = document.querySelector('.cart tbody');
+  tbody.appendChild(itemNode);
+}
+
+function populateTemplate(node, selector, value){
+  let results = node.querySelectorAll(selector);
+  for(let i=0; i<results.length; i++){
+    results[i].textContent = value;
+  }
 }
 
 function removeFromCart(itemId){
   let cart = document.querySelector('.cart');
-  cart.classList.remove('visible');
+  // TODO: conditionally hide if there are no longer any items in the cart
+  // cart.classList.remove('visible');
 }
