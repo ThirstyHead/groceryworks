@@ -2,6 +2,13 @@ body{
   background-color: tan;
 }
 
+button{
+  font-size: 1.2em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  box-shadow: 1px 1px 5px black;
+}
+
 caption{
   font-size: 1.2em;
   font-weight: bold;
@@ -50,6 +57,26 @@ main{
 }
 
 #cart-total, .item-total{  
+  text-align: right;
+}
+
+#checkout-dialog::backdrop, #checkout-dialog + .backdrop{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#checkout-dialog header{
+  padding: 0.5em;  
+}
+#checkout-dialog button{
+  font-size: 0.5em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  box-shadow: 1px 1px 5px black;
+}
+
+.dialog-buttons{
+  display: inline-block;
+  float: right;
   text-align: right;
 }
 

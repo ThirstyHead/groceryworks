@@ -4,6 +4,7 @@ function init(){
   addFilter(document.querySelector('input[name="item-filter"]:checked').value);
   enableItemFilter();  
   enableAddToCart();
+  enablePurchaseButtons();
   fetchItems();
 }
 
@@ -136,9 +137,55 @@ function updateTotal(){
 }
 
 function removeFromCart(itemId){
-  let nodes = document.querySelectorAll(`tr[data-id="${itemId}"]`);
+  let nodes = undefined;
+  if(itemId){
+    nodes = document.querySelectorAll(`tr[data-id="${itemId}"]`);
+  }else{
+    nodes = document.querySelectorAll(`tr[data-id]`);
+  }
+    
   for(let i=0; i<nodes.length; i++){
     nodes[i].remove();
   }
   updateTotal();
+}
+
+function clearAllCheckedItems(){
+  const items = document.querySelectorAll('.item input[type="checkbox"]:checked');
+  for(let i=0; i<items.length; i++){
+    items[i].checked = false;
+  }
+}
+
+// ===================
+// Purchase button(s)
+// ===================
+function enablePurchaseButtons(){
+  let purchaseButtons = document.querySelectorAll('.purchase-button');
+  for(let i=0; i<purchaseButtons.length; i++){
+    purchaseButtons[i].addEventListener('click', handlePurchaseEvent);
+  }
+
+  let cancelOrderButton = document.querySelector('#cancel-order-button');
+  cancelOrderButton.addEventListener('click', handleCancelOrderEvent);
+  let placeOrderButton = document.querySelector('#place-order-button');
+  placeOrderButton.addEventListener('click', handlePlaceOrderEvent);
+}
+
+function handlePurchaseEvent(event){
+  let checkoutDialog = document.querySelector('#checkout-dialog');
+  checkoutDialog.showModal();
+}
+
+function handleCancelOrderEvent(event){
+  let checkoutDialog = document.querySelector('#checkout-dialog');
+  checkoutDialog.close('cancelled');
+}
+
+function handlePlaceOrderEvent(event){
+  clearAllCheckedItems();
+  removeFromCart();
+
+  let checkoutDialog = document.querySelector('#checkout-dialog');
+  checkoutDialog.close('ordered');
 }

@@ -398,19 +398,31 @@
 
       <!-- Shopping Cart -->
       <div class="cart">
-        <button>Purchase</button>
+        <button class="purchase-button">Purchase</button>
         <table>
           <caption>Your Order</caption>
           <thead>
             <tr>
               <td>Total</td>
-              <td id="cart-total">$54.95</td>
+              <td id="cart-total">$0.00</td>
             </tr>
           </thead> 
 
           <tbody>
           </tbody>
         </table>
+
+        <dialog id="checkout-dialog">
+        <header>
+          Your Order
+          <span class="dialog-buttons">
+            <button id="place-order-button">Place Order</button>
+            <button id="cancel-order-button">Cancel</button>
+          </span>
+        </header>
+          This order will be shipped to the address on file, using your default credit card.
+        </dialog>
+
 
     </div> 
   </body>
