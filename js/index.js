@@ -58,6 +58,16 @@ function enableAddToCart(){
   for(let i=0; i<items.length; i++){
     items[i].addEventListener('click', handleAddToCartEvent);
   }
+
+  const imgs = document.querySelectorAll('.item img');
+  for(let i=0; i<imgs.length; i++){
+    imgs[i].addEventListener('mousedown', handleImageDragEvent);
+  }
+}
+
+function handleImageDragEvent(event){
+  //disable images from being dragged out of browser window
+  event.preventDefault();
 }
 
 function handleAddToCartEvent(event){

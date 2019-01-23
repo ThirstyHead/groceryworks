@@ -30,6 +30,7 @@ main{
   background-color: #ccc;
   padding: 1em;
   font-family: sans-serif;
+  text-align: center;
 }
 
 .cart table{
@@ -40,10 +41,12 @@ main{
 .cart thead td{
   padding-bottom: 1em;
   font-weight: bold;
+  text-align: left;
 }
 
 .cart tbody{
   font-style: italic;
+  text-align: left;
 }
 
 #cart-total, .item-total{  
@@ -59,6 +62,9 @@ main{
   padding: 1em;
   margin: 1em;
   text-align: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .item img{
@@ -67,6 +73,7 @@ main{
   border-radius: 6px;
   border: 1px solid #ccc;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .item input[type='checkbox']{
@@ -81,10 +88,6 @@ main{
 
 .item input[type='checkbox']:checked ~ p:after{
   content: " \02713 ";
-}
-
-.item p{
-  user-select: none;
 }
 
 .item .price::before{
@@ -110,20 +113,15 @@ main{
   width: 20%;
 }
 
-.switch-field {
-  font-family: sans-serif;
-}
-
 .switch-field label {
   display: block;
   width: 5em;
   background-color: #ccc;
   text-align: center;
   padding: 1em;
+  font-family: sans-serif;
   user-select: none;
-}
-
-.switch-field label:hover {
+  -webkit-user-select: none;
   cursor: pointer;
 }
 
