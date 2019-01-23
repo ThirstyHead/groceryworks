@@ -127,10 +127,8 @@ function updateTotal(){
 
 function removeFromCart(itemId){
   let nodes = document.querySelectorAll(`tr[data-id="${itemId}"]`);
-  console.dir(nodes);
   for(let i=0; i<nodes.length; i++){
     nodes[i].remove();
   }
- 
   updateTotal();
 }
