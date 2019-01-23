@@ -70,10 +70,11 @@ function handleAddToCartEvent(event){
 }
 
 function addToCart(itemId){
+  // make cart visible
   let cart = document.querySelector('.cart');
-  // TODO: conditionally display if there is an item in the cart
   cart.classList.add('visible');
 
+  // get template, create new writable node
   const item = JSON.parse(window.sessionStorage.getItem(itemId));
   let template = document.querySelector('#cart-item');
   let itemNode = document.importNode(template.content, true);
@@ -125,7 +126,11 @@ function updateTotal(){
 }
 
 function removeFromCart(itemId){
-  let cart = document.querySelector('.cart');
-  // TODO: conditionally hide if there are no longer any items in the cart
-  // cart.classList.remove('visible');
+  let nodes = document.querySelectorAll(`tr[data-id="${itemId}"]`);
+  console.dir(nodes);
+  for(let i=0; i<nodes.length; i++){
+    nodes[i].remove();
+  }
+ 
+  updateTotal();
 }
