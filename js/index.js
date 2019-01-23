@@ -77,25 +77,36 @@ function addToCart(itemId){
   const item = JSON.parse(window.sessionStorage.getItem(itemId));
   let template = document.querySelector('#cart-item');
   let itemNode = document.importNode(template.content, true);
-  populateTemplate(itemNode, '.item-name', item.name);
-  populateTemplate(itemNode, '.item-amount', 1);
+
+  // populate new node
+  populateNodeAttributes(itemNode, 'tr[data-id]', 'data-id', item.id);
+  populateNodeElements(itemNode, '.item-name', item.name);
+  populateNodeElements(itemNode, '.item-amount', 1);
 
   if(item.unit !== 'each'){
-    populateTemplate(itemNode, '.item-unit', item.unit);
+    populateNodeElements(itemNode, '.item-unit', item.unit);
   }
 
   let currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
-  populateTemplate(itemNode, '.item-total', currency.format(item.price));
-  
+  populateNodeElements(itemNode, '.item-total', currency.format(item.price));
+
+  // add new node to table in DOM
   let tbody = document.querySelector('.cart tbody');
   tbody.appendChild(itemNode);
   updateTotal();
 }
 
-function populateTemplate(node, selector, value){
-  let results = node.querySelectorAll(selector);
+function populateNodeElements(template, selector, value){
+  let results = template.querySelectorAll(selector);
   for(let i=0; i<results.length; i++){
     results[i].textContent = value;
+  }
+}
+
+function populateNodeAttributes(template, selector, attribute, value){
+  let results = template.querySelectorAll(selector);
+  for(let i=0; i<results.length; i++){
+    results[i].setAttribute(attribute, value);
   }
 }
 
