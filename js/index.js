@@ -6,6 +6,24 @@ function init(){
   enableAddToCart();
   enablePurchaseButtons();
   fetchItems();
+  polyfillDialog();
+}
+
+// =================================================
+// Polyfill for dialog element
+// https://github.com/GoogleChrome/dialog-polyfill
+// =================================================
+function polyfillDialog(){
+  if(typeof HTMLDialogElement === 'undefined'){
+    console.warn(`Native HTML <dialog> === ${typeof HTMLDialogElement}`);
+    console.warn(window.navigator.userAgent);
+    console.warn('Using polyfill: https://github.com/GoogleChrome/dialog-polyfill');
+    let dialogs = document.querySelectorAll('dialog');
+    for(let i=0; i<dialogs.length; i++){
+      dialogPolyfill.registerDialog(dialogs[i]);
+    }
+  }
+
 }
 
 // ========================
@@ -166,35 +184,39 @@ function enablePurchaseButtons(){
     purchaseButtons[i].addEventListener('click', handlePurchaseEvent);
   }
 
-  let cancelOrderButton = document.querySelector('#cancel-order-button');
-  cancelOrderButton.addEventListener('click', handleCancelOrderEvent);
   let placeOrderButton = document.querySelector('#place-order-button');
   placeOrderButton.addEventListener('click', handlePlaceOrderEvent);
+  let cancelOrderButton = document.querySelector('#cancel-order-button');
+  cancelOrderButton.addEventListener('click', handleCancelOrderEvent);
+  let checkoutDialog = document.querySelector('#checkout-dialog');
+  checkoutDialog.addEventListener('cancel', dialogCloseEvent);
+  checkoutDialog.addEventListener('close', dialogCloseEvent);
 }
 
 function handlePurchaseEvent(event){
-  let checkoutDialog = document.querySelector('#checkout-dialog');
-
   // clone cart from sidebar
   let cart = document.querySelector('.cart-table');
-  let dialogBody = checkoutDialog.querySelector('.dialog-body');
+  let dialogBody = document.querySelector('.dialog-body');
   dialogBody.appendChild(cart.cloneNode(true));
-  checkoutDialog.showModal();
-}
 
-function handleCancelOrderEvent(event){
   let checkoutDialog = document.querySelector('#checkout-dialog');
-  let dialogBody = checkoutDialog.querySelector('.dialog-body');
-  dialogBody.innerHTML = '';
-  checkoutDialog.close('cancelled');
+  checkoutDialog.showModal();
 }
 
 function handlePlaceOrderEvent(event){
   clearAllCheckedItems();
   removeFromCart();
-  let checkoutDialog = document.querySelector('#checkout-dialog');
-  let dialogBody = checkoutDialog.querySelector('.dialog-body');
-  dialogBody.innerHTML = '';
 
+  let checkoutDialog = document.querySelector('#checkout-dialog');
   checkoutDialog.close('ordered');
+}
+
+function handleCancelOrderEvent(event){
+  let checkoutDialog = document.querySelector('#checkout-dialog');
+  checkoutDialog.close('cancelled');
+}
+
+function dialogCloseEvent(event){
+  let dialogBody = document.querySelector('.dialog-body');
+  dialogBody.innerHTML = '';
 }

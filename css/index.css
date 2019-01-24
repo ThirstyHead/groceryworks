@@ -65,7 +65,12 @@ main{
   width: 50%;
 }
 
-#checkout-dialog::backdrop, #checkout-dialog + .backdrop{
+#checkout-dialog::backdrop{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* dialog polyfill */
+dialog + .backdrop{
   background-color: rgba(0, 0, 0, 0.8);
 }
 

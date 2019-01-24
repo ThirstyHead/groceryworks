@@ -7,8 +7,14 @@
     <meta name="author" content="Scott Davis <scott.davis@thoughtworks.com>">
     <meta name="description" content="GroceryWorks is a fictional grocery store website.">
 
+    <!-- Polyfill for dialog element -->
+    <link rel="stylesheet" href="node_modules/dialog-polyfill/dialog-polyfill.css">
+    <script defer src="node_modules/dialog-polyfill/dialog-polyfill.js"></script>
+
     <link rel="stylesheet" href="css/index.css">
     <script defer src="js/index.js"></script>
+
+
 
     <!-- Used for adding items to the cart -->
     <template id="cart-item">
@@ -23,6 +29,7 @@
   </head>
 
   <body>
+
     <header>
       <span class="logo-first">Grocery</span><span class="logo-second">Works</span>
     </header>
@@ -413,20 +420,17 @@
         </table>
 
         <dialog id="checkout-dialog">
-        <header>
-          <span class="dialog-buttons">
-            <button id="place-order-button">Place Order</button>
-            <button id="cancel-order-button">Cancel</button>
-          </span>
-        </header>
+          <header>
+            <span class="dialog-buttons">
+              <button id="place-order-button">Place Order</button>
+              <button id="cancel-order-button">Cancel</button>
+            </span>
+          </header>
 
-        <div class="dialog-body">
-        
-        </div>
+          <div class="dialog-body"></div>
         </dialog>
+      </div> 
 
-
-    </div> 
   </body>
 </html>
 
