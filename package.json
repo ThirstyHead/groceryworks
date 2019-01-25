@@ -1,6 +1,6 @@
 {
   "name": "groceryworks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "GroceryWorks is a fictional grocery store website.",
   "main": "index.html",
   "scripts": {
