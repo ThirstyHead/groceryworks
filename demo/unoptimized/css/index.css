@@ -15,11 +15,6 @@ caption{
   padding-bottom: 1em;
 }
 
-/* dialog polyfill */
-dialog + .backdrop{
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 header{
   background-color: green;
   color: white;
@@ -30,6 +25,10 @@ header{
 
 main{
   padding: 2em;
+}
+
+.container{
+  display: flex;
 }
 
 .cart{
@@ -70,10 +69,10 @@ main{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.container{
-  display: flex;
+/* dialog polyfill */
+dialog + .backdrop{
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 #checkout-dialog button{
   font-size: 0.5em;
@@ -125,10 +124,8 @@ main{
   color: green;
 }
 
-.item input[type='checkbox']:checked ~ p::after{
-  content: ' \02713 ';
-  /* HTML entity for &check; in hex */
-  /* https://dev.w3.org/html5/html-author/charref */
+.item input[type='checkbox']:checked ~ p:after{
+  content: " \02713 ";
 }
 
 .item .price::before{

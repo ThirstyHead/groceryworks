@@ -1,0 +1,22 @@
+{
+  "name": "groceryworks",
+  "version": "0.1.0",
+  "description": "GroceryWorks is a fictional grocery store website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThirstyHead/groceryworks.git"
+  },
+  "author": "Scott Davis <scott.davis@thoughtworks.com>",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/ThirstyHead/groceryworks/issues"
+  },
+  "homepage": "https://github.com/ThirstyHead/groceryworks#readme",
+  "dependencies": {
+    "dialog-polyfill": "github:googlechrome/dialog-polyfill"
+  }
+}
