@@ -1,0 +1,348 @@
+{
+  "items": [
+    {
+      "id": "flax-seeds",
+      "name": "Flax Seeds",
+      "category": "beans",
+      "price": 0.59,
+      "unit": "lb",
+      "photo": "flax-seeds.jpg"
+    },
+    {
+      "id": "french-green-lentils",
+      "name": "French Green Lentils",
+      "category": "beans",
+      "price": 0.99,
+      "unit": "lb",
+      "photo": "french-green-lentils.jpg"
+    },
+    {
+      "id": "green-split-peas",
+      "name": "Green Split Peas",
+      "category": "beans",
+      "price": 0.59,
+      "unit": "lb",
+      "photo": "green-split-peas.jpg"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "category": "beans",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "lentils.jpg"
+    },
+    {
+      "id": "pinto-beans", 
+      "name": "Pinto Beans",
+      "category": "beans",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "pinto-beans.jpg"
+    },
+    {
+      "id": "white-navy-beans",
+      "name": "White Navy Beans",
+      "category": "beans",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "white-navy-beans.jpg"
+    },
+    {
+      "id": "yellow-split-peas", 
+      "name": "Yellow Split Peas",
+      "category": "beans",
+      "price": 0.59,
+      "unit": "lb",
+      "photo": "yellow-split-peas.jpg"
+    },
+    {
+      "id": "peanuts", 
+      "name": "Peanuts",
+      "category": "nuts",
+      "price": 1.89,
+      "unit": "lb",
+      "photo": "peanuts.jpg"
+    },
+    {
+      "id": "pistachios", 
+      "name": "Pistachios",
+      "category": "nuts",
+      "price": 9.99,
+      "unit": "lb",
+      "photo": "pistachios.jpg"
+    },
+    {
+      "id": "roasted-cashews", 
+      "name": "Roasted Cashews",
+      "category": "nuts",
+      "price": 12.89,
+      "unit": "lb",
+      "photo": "roasted-cashews.jpg"
+    },
+    {
+      "id": "sunflower-seeds", 
+      "name": "Sunflower Seeds",
+      "category": "nuts",
+      "price": 1.49,
+      "unit": "lb",
+      "photo": "sunflower-seeds.jpg"
+    },
+    {
+      "id": "toasted-pumpkin-seeds", 
+      "name": "Toasted Pumpkin Seeds",
+      "category": "nuts",
+      "price": 2.99,
+      "unit": "lb",
+      "photo": "toasted-pumpkin-seeds.jpg"
+    },
+    {
+      "id": "egg-noodles", 
+      "name": "Egg Noodles",
+      "category": "pasta",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "egg-noodles.jpg"
+    },
+    {
+      "id": "jasmine-rice", 
+      "name": "Jasmine Rice",
+      "category": "pasta",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "jasmine-rice.jpg"
+    },
+    {
+      "id": "macaroni", 
+      "name": "Macaroni",
+      "category": "pasta",
+      "price": 0.49,
+      "unit": "lb",
+      "photo": "macaroni.jpg"
+    },
+    {
+      "id": "mini-shells", 
+      "name": "Mini Shells",
+      "category": "pasta",
+      "price": 0.49,
+      "unit": "lb",
+      "photo": "mini-shells.jpg"
+    },
+    {
+      "id": "penne", 
+      "name": "Penne",
+      "category": "pasta",
+      "price": 0.49,
+      "unit": "lb",
+      "photo": "penne.jpg"
+    },
+    {
+      "id": "rotini", 
+      "name": "Rotini",
+      "category": "pasta",
+      "price": 0.49,
+      "unit": "lb",
+      "photo": "rotini.jpg"
+    },
+    { 
+      "id": "short-grain-brown-rice", 
+      "name": "Short Grain Brown Rice",
+      "category": "pasta",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "short-grain-brown-rice.jpg"
+    },
+    {
+      "id": "avocados", 
+      "name": "Avocados",
+      "category": "produce",
+      "price": 1.29,
+      "unit": "each",
+      "photo": "avocados.jpg"
+    },
+    {
+      "id": "bell-peppers", 
+      "name": "Bell Peppers",
+      "category": "produce",
+      "price": 1.49,
+      "unit": "each",
+      "photo": "bell-peppers.jpg"
+    },
+    {
+      "id": "brussels-sprouts", 
+      "name": "Brussels Sprouts",
+      "category": "produce",
+      "price": 2.99,
+      "unit": "lb",
+      "photo": "brussels-sprouts.jpg"
+    },
+    {
+      "id": "concord-grapes", 
+      "name": "Concord Grapes",
+      "category": "produce",
+      "price": 2.49,
+      "unit": "each",
+      "photo": "concord-grapes.jpg"
+    },
+    {
+      "id": "cranberries", 
+      "name": "Cranberries",
+      "category": "produce",
+      "price": 2.49,
+      "unit": "lb",
+      "photo": "cranberries.jpg"
+    },
+    {
+      "id": "eggplant", 
+      "name": "Eggplant",
+      "category": "produce",
+      "price": 1.49,
+      "unit": "each",
+      "photo": "eggplant.jpg"
+    },
+    {
+      "id": "gala-apples", 
+      "name": "Gala Apples",
+      "category": "produce",
+      "price": 1.49,
+      "unit": "lb",
+      "photo": "gala-apples.jpg"
+    },
+    {
+      "id": "granny-smith-apples", 
+      "name": "Granny Smith Apples",
+      "category": "produce",
+      "price": 1.69,
+      "unit": "lb",
+      "photo": "granny-smith-apples.jpg"
+    },
+    {      
+      "id": "grapefruit",
+      "name": "Grapefruit",
+      "category": "produce",
+      "price": 0.99,
+      "unit": "lb",
+      "photo": "grapefruit.jpg"
+    },
+    {
+      "id": "green-tomatoes", 
+      "name": "Green Tomatoes",
+      "category": "produce",
+      "price": 2.69,
+      "unit": "lb",
+      "photo": "green-tomatoes.jpg"
+    },
+    {
+      "id": "limes", 
+      "name": "Limes",
+      "category": "produce",
+      "price": 0.59,
+      "unit": "each",
+      "photo": "limes.jpg"
+    },
+    {
+      "id": "mushrooms", 
+      "name": "Mushrooms",
+      "category": "produce",
+      "price": 3.99,
+      "unit": "lb",
+      "photo": "mushrooms.jpg"
+    },
+    {
+      "id": "onions", 
+      "name": "Onions",
+      "category": "produce",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "onions.jpg"
+    },
+    {
+      "id": "oranges", 
+      "name": "Oranges",
+      "category": "produce",
+      "price": 0.89,
+      "unit": "lb",
+      "photo": "oranges.jpg"
+    },
+    {
+      "id": "peaches",
+      "name": "Peaches",
+      "category": "produce",
+      "price": 1.29,
+      "unit": "each",
+      "photo": "peach.jpg"
+    },
+    {
+      "id": "potatoes", 
+      "name": "Potatoes",
+      "category": "produce",
+      "price": 0.79,
+      "unit": "lb",
+      "photo": "potatoes.jpg"
+    },
+    {
+      "id": "red-apples", 
+      "name": "Red Apples",
+      "category": "produce",
+      "price": 1.69,
+      "unit": "lb",
+      "photo": "red-apples.jpg"
+    },
+    {
+      "id": "red-cherries", 
+      "name": "Red Cherries",
+      "category": "produce",
+      "price": 7.99,
+      "unit": "lb",
+      "photo": "red-cherries.jpg"
+    },
+    {
+      "id": "spinach", 
+      "name": "Spinach",
+      "category": "produce",
+      "price": 2.49,
+      "unit": "lb",
+      "photo": "spinach.jpg"
+    },
+    {
+      "id": "tangerines", 
+      "name": "Tangerines",
+      "category": "produce",
+      "price": 2.89,
+      "unit": "lb",
+      "photo": "tangerines.jpg"
+    },
+    {
+      "id": "tomatoes", 
+      "name": "Tomatoes",
+      "category": "produce",
+      "price": 1.89,
+      "unit": "lb",
+      "photo": "tomatoes.jpg"
+    },
+    {
+      "id": "vine-ripened-tomatoes", 
+      "name": "Vine-Ripened Tomatoes",
+      "category": "produce",
+      "price": 2.89,
+      "unit": "lb",
+      "photo": "vine-ripened-tomatoes.jpg"
+    },
+    {
+      "id": "yams", 
+      "name": "Yams",
+      "category": "produce",
+      "price": 0.99,
+      "unit": "lb",
+      "photo": "yams.jpg"
+    },
+    {
+      "id": "yukon-gold-potatoes", 
+      "name": "Yukon Gold Potatoes",
+      "category": "produce",
+      "price": 1.49,
+      "unit": "lb",
+      "photo": "yukon-gold-potatoes.jpg"
+    }
+  ]
+}
