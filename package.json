@@ -21,6 +21,8 @@
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
   },
   "devDependencies": {
-    "parse5": "^5.1.0"
+    "css-select": "^2.0.2",
+    "parse5": "^5.1.0",
+    "parse5-htmlparser2-tree-adapter": "^5.1.0"
   }
 }
