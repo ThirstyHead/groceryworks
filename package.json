@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ThirstyHead/groceryworks#readme",
   "dependencies": {
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
+  },
+  "devDependencies": {
+    "parse5": "^5.1.0"
   }
 }
