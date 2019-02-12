@@ -4,7 +4,8 @@
   "description": "GroceryWorks is a fictional grocery store website.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node utils/build.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/ThirstyHead/groceryworks#readme",
   "dependencies": {
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
+  },
+  "devDependencies": {
+    "parse5": "^5.1.0"
   }
 }
