@@ -1,21 +1,28 @@
 const fs = require('fs');
 const parse5 = require('parse5');
+const util = require('util');
 
+
+let utilOptions = {
+  depth: null
+}
+// colors: true
 
 let filename = 'index.html';
 let htmlSrc = fs.readFileSync(filename, 'utf8');
 let document = parse5.parse(htmlSrc);
+console.log(util.inspect(document, utilOptions));
 let html = querySelector(document, 'html'); 
 let body = querySelector(html, 'body'); 
 let container = querySelector(body, '.container');
 let main = querySelector(container, 'main'); 
-main.childNodes = [];
+// main.childNodes = [];
 
-fs.writeFile(filename, parse5.serialize(document), err => {
-  if(err) throw err;
-  console.log(`Saved ${filename}`);
-});
-
+//fs.writeFile(filename, parse5.serialize(document), err => {
+//  if(err) throw err;
+//  console.log(`Saved ${filename}`);
+//});
+//
 
 function querySelector(parentElement, searchString){
   let result = undefined;

@@ -21,6 +21,7 @@
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
   },
   "devDependencies": {
+    "flatted": "^2.0.0",
     "parse5": "^5.1.0"
   }
 }
