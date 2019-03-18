@@ -4,6 +4,7 @@
   "description": "GroceryWorks is a fictional grocery store website.",
   "main": "index.html",
   "scripts": {
+    "adddemo": "node utils/adddemo.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "node utils/build.js"
@@ -22,6 +23,7 @@
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
   },
   "devDependencies": {
+    "fs-extra": "^7.0.1",
     "parse5": "^5.1.0"
   }
 }
