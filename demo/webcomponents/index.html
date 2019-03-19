@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <script defer src="js/index.js"></script>
+    <script defer src="components/th-sidebar/index.js"></script>
 
     <!-- Template for adding items to the cart -->
     <template id="cart-item">
@@ -32,19 +33,7 @@
     </header>
 
     <div class="container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <div class="switch-field">
-          <input type="radio" id="beans" name="item-filter" value="beans" checked/>
-          <label for="beans">Beans</label>
-          <input type="radio" id="nuts" name="item-filter" value="nuts" />
-          <label for="nuts">Nuts</label>
-          <input type="radio" id="pasta" name="item-filter" value="pasta" />
-          <label for="pasta">Pasta</label>
-          <input type="radio" id="produce" name="item-filter" value="produce" />
-          <label for="produce">Produce</label>
-        </div>
-      </div>
+      <th-sidebar></th-sidebar>
 
       <!-- Main -->
       <main>

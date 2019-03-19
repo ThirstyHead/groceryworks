@@ -57,7 +57,7 @@ main{
   text-align: left;
 }
 
-.cart .cart-total, .item-total{  
+.cart .cart-total, .item-total{
   text-align: right;
 }
 
@@ -154,25 +154,7 @@ main{
   width: 20%;
 }
 
-.switch-field label {
-  display: block;
-  width: 5em;
-  background-color: #ccc;
-  text-align: center;
-  padding: 1em;
-  font-family: sans-serif;
-  user-select: none;
-  -webkit-user-select: none;
-  cursor: pointer;
-}
 
-.switch-field input:checked + label {
-  background-color: #A5DC86;
-}
-
-.switch-field input[type='radio']{
-  display: none;
-}
 
 .visible {
   visibility: visible;

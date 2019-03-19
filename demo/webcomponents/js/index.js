@@ -1,8 +1,6 @@
 window.addEventListener('load', init);
 
 function init(){
-  addFilter(document.querySelector('input[name="item-filter"]:checked').value);
-  enableItemFilter();  
   enableAddToCart();
   enablePurchaseButtons();
   fetchItems();
@@ -46,16 +44,7 @@ function saveItems(json){
 // ======================
 // Filter items onscreen
 // ======================
-function enableItemFilter(){
-  const itemFilters = document.querySelectorAll('input[name="item-filter"]');
-  for(let i=0; i<itemFilters.length; i++){
-    itemFilters[i].addEventListener('click', handleFilterEvent);
-  }
-}
 
-function handleFilterEvent(event){
-  addFilter(event.srcElement.value);        
-}
 
 function addFilter(category){
   const allItems = document.querySelectorAll('.item');
@@ -148,7 +137,7 @@ function updateTotal(){
     let itemTotal = Number(parts[1]);
     total += itemTotal;
   }
-  
+
   let cartTotal = document.querySelector('.cart-total');
   let currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
   cartTotal.innerHTML = currency.format(total);
@@ -161,7 +150,7 @@ function removeFromCart(itemId){
   }else{
     nodes = document.querySelectorAll(`tr[data-id]`);
   }
-    
+
   for(let i=0; i<nodes.length; i++){
     nodes[i].remove();
   }
