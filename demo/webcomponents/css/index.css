@@ -92,50 +92,6 @@ main{
   overflow-y: auto;
 }
 
-.item{
-  display: none;
-  background-color: white;
-  border-radius: 6px;
-  width: 12em;
-  height: 11em;
-  padding: 1em;
-  margin: 1em;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.item img{
-  height: 75%;
-  object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.item input[type='checkbox']{
-  display: none;
-}
-
-.item input[type='checkbox']:checked ~ p{
-  font-weight: bold;
-  font-style: italic;
-  color: green;
-}
-
-.item input[type='checkbox']:checked ~ p::after{
-  content: ' \02713 ';
-  /* HTML entity for &check; in hex */
-  /* https://dev.w3.org/html5/html-author/charref */
-}
-
-.item .price::before{
-  content: '';
-  display: block;
-}
-
 .logo-first{
   font-weight: bolder;
 }
@@ -153,8 +109,6 @@ main{
 .sidebar{
   width: 20%;
 }
-
-
 
 .visible {
   visibility: visible;
