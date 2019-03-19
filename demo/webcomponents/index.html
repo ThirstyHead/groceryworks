@@ -15,17 +15,7 @@
     <script defer src="js/index.js"></script>
     <script defer src="components/th-itemlist/index.js"></script>
     <script defer src="components/th-sidebar/index.js"></script>
-
-    <!-- Template for adding items to the cart -->
-    <template id="cart-item">
-      <tr data-id="">
-        <td colspan="2" class="item-name"></td>
-      </tr>
-      <tr data-id="">
-        <td><span class="item-amount"></span> <span class="item-unit"></span></td>
-        <td class="item-total"></td>
-      </tr>
-    </template>
+    <script defer src="components/th-cart/index.js"></script>
   </head>
 
   <body>
@@ -36,35 +26,6 @@
     <div class="container">
       <th-sidebar></th-sidebar>
       <th-itemlist></th-itemlist>
-
-
-      <!-- Shopping Cart -->
-      <div class="cart">
-        <button class="purchase-button">Purchase</button>
-        <table class="cart-table">
-          <caption>Your Order</caption>
-          <thead>
-            <tr>
-              <td>Total</td>
-              <td class="cart-total">$0.00</td>
-            </tr>
-          </thead>
-
-          <tbody>
-          </tbody>
-        </table>
-
-        <dialog id="checkout-dialog">
-          <header>
-            <span class="dialog-buttons">
-              <button id="place-order-button">Place Order</button>
-              <button id="cancel-order-button">Cancel</button>
-            </span>
-          </header>
-
-          <div class="dialog-body"></div>
-        </dialog>
-      </div>
-
+      <th-cart></th-cart>
   </body>
 </html>

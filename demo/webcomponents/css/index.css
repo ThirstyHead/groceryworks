@@ -2,24 +2,6 @@ body{
   background-color: tan;
 }
 
-button{
-  font-size: 1.2em;
-  border-radius: 6px;
-  margin-bottom: 1em;
-  box-shadow: 1px 1px 5px black;
-}
-
-caption{
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-bottom: 1em;
-}
-
-/* dialog polyfill */
-dialog + .backdrop{
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 header{
   background-color: green;
   color: white;
@@ -32,64 +14,8 @@ main{
   padding: 2em;
 }
 
-.cart{
-  flex: 0 0 15%;
-  visibility: hidden;
-  background-color: #ccc;
-  padding: 1em;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.cart table{
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.cart thead td{
-  padding-bottom: 1em;
-  font-weight: bold;
-  text-align: left;
-}
-
-.cart tbody{
-  font-style: italic;
-  text-align: left;
-}
-
-.cart .cart-total, .item-total{
-  text-align: right;
-}
-
-#checkout-dialog{
-  height: 75%;
-  width: 50%;
-}
-
-#checkout-dialog::backdrop{
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 .container{
   display: flex;
-}
-
-
-#checkout-dialog button{
-  font-size: 0.5em;
-  border-radius: 6px;
-  margin-bottom: 1em;
-  box-shadow: 1px 1px 5px black;
-}
-
-#checkout-dialog header{
-  padding: 0.25em;
-  margin-bottom: 1em;
-}
-
-.dialog-body{
-  max-height: 75%;
-  overflow-y: auto;
 }
 
 .logo-first{
@@ -102,14 +28,6 @@ main{
   color: #ccc;
 }
 
-.show{
-  display: inline-block;
-}
-
 .sidebar{
   width: 20%;
-}
-
-.visible {
-  visibility: visible;
 }
