@@ -7,6 +7,7 @@ window.customElements.define('th-itemlist',
     connectedCallback(){
       this.appendChild(this.style);
       this.appendChild(this.content);
+      this.enableItemEvents();
     }
 
     get style(){
@@ -464,6 +465,39 @@ window.customElements.define('th-itemlist',
         `;
 
       return div;
+    }
+
+    // =================
+    // Add/remove items
+    // =================
+    enableItemEvents(){
+      const items = document.querySelectorAll('.item input[type="checkbox"]');
+      for(let i=0; i<items.length; i++){
+        items[i].addEventListener('click', this.handleItemClickEvent);
+      }
+
+      const imgs = document.querySelectorAll('.item img');
+      for(let i=0; i<imgs.length; i++){
+        imgs[i].addEventListener('mousedown', this.handleImageDragEvent);
+      }
+    }
+
+    handleImageDragEvent(event){
+      //disable images from being dragged out of browser window
+      event.preventDefault();
+    }
+
+    handleItemClickEvent(event){
+      const itemId = event.srcElement.value;
+      if(event.srcElement.checked){
+        window.dispatchEvent(new CustomEvent('additem',
+                                           { detail: { itemId: itemId }})
+        );
+      }else{
+        window.dispatchEvent(new CustomEvent('removeitem',
+                                           { detail: { itemId: itemId }})
+        );
+      }
     }
 
   }

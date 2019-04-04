@@ -8,7 +8,6 @@ window.customElements.define('th-cart',
       const shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.appendChild(this.style);
       shadowRoot.appendChild(this.content);
-      this.enableAddToCart();
       this.enablePurchaseButtons();
       this.polyfillDialog();
       window.addEventListener('additem', (e) => this.handleAdditemEvent(e));
@@ -173,48 +172,6 @@ window.customElements.define('th-cart',
         for(let i=0; i<dialogs.length; i++){
           dialogPolyfill.registerDialog(dialogs[i]);
         }
-      }
-    }
-
-
-    // ======================
-    // Add items to cart
-    // ======================
-    // TODO move to itemlist
-    enableAddToCart(){
-      const items = document.querySelectorAll('.item input[type="checkbox"]');
-      for(let i=0; i<items.length; i++){
-        items[i].addEventListener('click', this.handleAddToCartEvent);
-      }
-
-      const imgs = document.querySelectorAll('.item img');
-      for(let i=0; i<imgs.length; i++){
-        imgs[i].addEventListener('mousedown', this.handleImageDragEvent);
-      }
-    }
-
-    // TODO move to itemlist
-    handleImageDragEvent(event){
-      //disable images from being dragged out of browser window
-      event.preventDefault();
-    }
-
-
-    // TODO move to itemlist
-    handleAddToCartEvent(event){
-      const itemId = event.srcElement.value;
-      if(event.srcElement.checked){
-        // this.addToCart(itemId);
-        //TODO raise an event instead of making local method call
-        // in the context of the input element, this.addToCart is not a function
-        window.dispatchEvent(new CustomEvent('additem',
-                                           { detail: { itemId: itemId }})
-        );
-      }else{
-        // this.removeFromCart(itemId);
-        window.dispatchEvent(new CustomEvent('removeitem',
-                                           { detail: { itemId: itemId }})
-        );
       }
     }
 
