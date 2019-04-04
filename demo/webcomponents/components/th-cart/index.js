@@ -5,11 +5,14 @@ window.customElements.define('th-cart',
     }
 
     connectedCallback(){
-      this.appendChild(this.style);
-      this.appendChild(this.content);
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(this.style);
+      shadowRoot.appendChild(this.content);
       this.enableAddToCart();
       this.enablePurchaseButtons();
       this.polyfillDialog();
+      window.addEventListener('additem', (e) => this.handleAdditemEvent(e));
+      window.addEventListener('removeitem', (e) => this.handleRemoveitemEvent(e));
     }
 
     get style(){
@@ -182,17 +185,42 @@ window.customElements.define('th-cart',
       }
     }
 
+    handleImageDragEvent(event){
+      //disable images from being dragged out of browser window
+      event.preventDefault();
+    }
+
+
     handleAddToCartEvent(event){
       const itemId = event.srcElement.value;
       console.dir(this);
       if(event.srcElement.checked){
-        this.addToCart(itemId);
-        //TODO raise an event instead of making local method call 
+        // this.addToCart(itemId);
+        //TODO raise an event instead of making local method call
         // in the context of the input element, this.addToCart is not a function
+        console.log('add me, please');
+        window.dispatchEvent(new CustomEvent('additem',
+                                           { detail: { itemId: itemId }})
+        ); 
       }else{
-        this.removeFromCart(itemId);
+        // this.removeFromCart(itemId);
+        console.log('remove me, please');
+        window.dispatchEvent(new CustomEvent('removeitem',
+                                           { detail: { itemId: itemId }})
+        );
       }
     }
+
+    handleAdditemEvent(event){
+      console.log('private handler');
+      console.log(event);
+    }
+
+    handleRemoveitemEvent(event){
+      console.log('private handler');
+      console.log(event);
+    }
+
 
     addToCart(itemId){
       // make cart visible
@@ -268,16 +296,16 @@ window.customElements.define('th-cart',
     // Purchase button(s)
     // ===================
     enablePurchaseButtons(){
-      let purchaseButtons = this.querySelectorAll('.purchase-button');
+      let purchaseButtons = this.shadowRoot.querySelectorAll('.purchase-button');
       for(let i=0; i<purchaseButtons.length; i++){
         purchaseButtons[i].addEventListener('click', this.handlePurchaseEvent);
       }
 
-      let placeOrderButton = this.querySelector('#place-order-button');
+      let placeOrderButton = this.shadowRoot.querySelector('#place-order-button');
       placeOrderButton.addEventListener('click', this.handlePlaceOrderEvent);
-      let cancelOrderButton = this.querySelector('#cancel-order-button');
+      let cancelOrderButton = this.shadowRoot.querySelector('#cancel-order-button');
       cancelOrderButton.addEventListener('click', this.handleCancelOrderEvent);
-      let checkoutDialog = this.querySelector('#checkout-dialog');
+      let checkoutDialog = this.shadowRoot.querySelector('#checkout-dialog');
       checkoutDialog.addEventListener('cancel', this.dialogCloseEvent);
       checkoutDialog.addEventListener('close', this.dialogCloseEvent);
     }

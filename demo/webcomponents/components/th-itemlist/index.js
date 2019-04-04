@@ -55,7 +55,7 @@ window.customElements.define('th-itemlist',
           content: '';
           display: block;
         }
-              
+
         .show{
           display: inline-block;
         }
@@ -464,12 +464,6 @@ window.customElements.define('th-itemlist',
         `;
 
       return div;
-    }
-
-
-    handleImageDragEvent(event){
-      //disable images from being dragged out of browser window
-      event.preventDefault();
     }
 
   }
