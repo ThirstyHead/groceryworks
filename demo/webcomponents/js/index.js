@@ -2,16 +2,7 @@ window.addEventListener('load', init);
 
 function init(){
   fetchItems();
-  window.addEventListener('additem', handleAdditemEvent);
 }
-
-function handleAdditemEvent(event){
-  console.log('global handler');
-  console.log(event);
-}
-
-
-
 
 // ========================
 // Fetch items from server
