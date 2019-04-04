@@ -37,6 +37,14 @@ window.customElements.define('th-cart',
           background-color: rgba(0, 0, 0, 0.8);
         }
 
+        header{
+          background-color: green;
+          color: white;
+          padding: 1em;
+          font-size: 2em;
+          font-family: sans-serif;
+        }
+
         .cart{
             visibility: hidden;
             background-color: #ccc;
@@ -295,16 +303,16 @@ window.customElements.define('th-cart',
     enablePurchaseButtons(){
       let purchaseButtons = this.shadowRoot.querySelectorAll('.purchase-button');
       for(let i=0; i<purchaseButtons.length; i++){
-        purchaseButtons[i].addEventListener('click', this.handlePurchaseEvent);
+        purchaseButtons[i].addEventListener('click', (e) => this.handlePurchaseEvent(e));
       }
 
       let placeOrderButton = this.shadowRoot.querySelector('#place-order-button');
-      placeOrderButton.addEventListener('click', this.handlePlaceOrderEvent);
+      placeOrderButton.addEventListener('click', (e) => this.handlePlaceOrderEvent(e));
       let cancelOrderButton = this.shadowRoot.querySelector('#cancel-order-button');
-      cancelOrderButton.addEventListener('click', this.handleCancelOrderEvent);
+      cancelOrderButton.addEventListener('click', (e) => this.handleCancelOrderEvent(e));
       let checkoutDialog = this.shadowRoot.querySelector('#checkout-dialog');
-      checkoutDialog.addEventListener('cancel', this.dialogCloseEvent);
-      checkoutDialog.addEventListener('close', this.dialogCloseEvent);
+      checkoutDialog.addEventListener('cancel', (e) => this.dialogCloseEvent(e));
+      checkoutDialog.addEventListener('close', (e) => this.dialogCloseEvent(e));
     }
 
     handlePurchaseEvent(event){
