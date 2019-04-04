@@ -14,6 +14,11 @@ main{
   padding: 2em;
 }
 
+th-cart{
+  flex: 0 0 20%;
+  display: block;
+}
+
 .container{
   display: flex;
 }

@@ -38,7 +38,6 @@ window.customElements.define('th-cart',
         }
 
         .cart{
-            flex: 0 0 15%;
             visibility: hidden;
             background-color: #ccc;
             padding: 1em;
@@ -202,7 +201,7 @@ window.customElements.define('th-cart',
         // in the context of the input element, this.addToCart is not a function
         window.dispatchEvent(new CustomEvent('additem',
                                            { detail: { itemId: itemId }})
-        ); 
+        );
       }else{
         // this.removeFromCart(itemId);
         window.dispatchEvent(new CustomEvent('removeitem',
