@@ -36,3 +36,64 @@ th-cart{
 .sidebar{
   width: 20%;
 }
+
+/******************/
+/* Dialog styling */
+/******************/
+#checkout-dialog{
+    height: 75%;
+    width: 50%;
+    text-align: center;
+}
+
+#checkout-dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#checkout-dialog button{
+    font-size: 0.5em;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    box-shadow: 1px 1px 5px black;
+}
+
+#checkout-dialog header{
+    padding: 0.25em;
+    margin-bottom: 1em;
+}
+
+/* dialog polyfill */
+dialog + .backdrop{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dialog-body{
+    max-height: 75%;
+    overflow-y: auto;
+}
+
+.dialog-body caption{
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.dialog-body table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dialog-body thead td{
+    padding-bottom: 1em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dialog-body tbody{
+    font-style: italic;
+    text-align: left;
+}
+
+.cart-table, td.cart-total, .item-total{
+    text-align: right;
+}

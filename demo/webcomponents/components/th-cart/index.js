@@ -9,7 +9,6 @@ window.customElements.define('th-cart',
       shadowRoot.appendChild(this.style);
       shadowRoot.appendChild(this.content);
       this.enablePurchaseButtons();
-      this.polyfillDialog();
       window.addEventListener('additem', (e) => this.handleAdditemEvent(e));
       window.addEventListener('removeitem', (e) => this.handleRemoveitemEvent(e));
     }
@@ -29,19 +28,6 @@ window.customElements.define('th-cart',
           font-size: 1.2em;
           font-weight: bold;
           padding-bottom: 1em;
-        }
-
-        /* dialog polyfill */
-        dialog + .backdrop{
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        header{
-          background-color: green;
-          color: white;
-          padding: 1em;
-          font-size: 2em;
-          font-family: sans-serif;
         }
 
         .cart{
@@ -70,32 +56,6 @@ window.customElements.define('th-cart',
 
         .cart .cart-total, .item-total{
             text-align: right;
-        }
-
-        #checkout-dialog{
-            height: 75%;
-            width: 50%;
-        }
-
-        #checkout-dialog::backdrop{
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        #checkout-dialog button{
-            font-size: 0.5em;
-            border-radius: 6px;
-            margin-bottom: 1em;
-            box-shadow: 1px 1px 5px black;
-        }
-
-        #checkout-dialog header{
-            padding: 0.25em;
-            margin-bottom: 1em;
-        }
-
-        .dialog-body{
-            max-height: 75%;
-            overflow-y: auto;
         }
 
         .show{
@@ -140,39 +100,11 @@ window.customElements.define('th-cart',
             </tbody>
           </table>
 
-          <dialog id="checkout-dialog">
-            <header>
-              <span class="dialog-buttons">
-                <button id="place-order-button">Place Order</button>
-                <button id="cancel-order-button">Cancel</button>
-              </span>
-            </header>
-
-            <div class="dialog-body"></div>
-          </dialog>
         </div>
 
         `;
 
       return div;
-    }
-
-
-
-    // =================================================
-    // Polyfill for dialog element
-    // https://github.com/GoogleChrome/dialog-polyfill
-    // =================================================
-    polyfillDialog(){
-      if(typeof HTMLDialogElement === 'undefined'){
-        console.warn(`Native HTML <dialog> === ${typeof HTMLDialogElement}`);
-        console.warn(window.navigator.userAgent);
-        console.warn('Using polyfill: https://github.com/GoogleChrome/dialog-polyfill');
-        let dialogs = this.shadowRoot.querySelectorAll('dialog');
-        for(let i=0; i<dialogs.length; i++){
-          dialogPolyfill.registerDialog(dialogs[i]);
-        }
-      }
     }
 
     handleAdditemEvent(event){
@@ -182,7 +114,6 @@ window.customElements.define('th-cart',
     handleRemoveitemEvent(event){
       this.removeFromCart(event.detail.itemId);
     }
-
 
     addToCart(itemId){
       // make cart visible
@@ -263,41 +194,16 @@ window.customElements.define('th-cart',
         purchaseButtons[i].addEventListener('click', (e) => this.handlePurchaseEvent(e));
       }
 
-      let placeOrderButton = this.shadowRoot.querySelector('#place-order-button');
-      placeOrderButton.addEventListener('click', (e) => this.handlePlaceOrderEvent(e));
-      let cancelOrderButton = this.shadowRoot.querySelector('#cancel-order-button');
-      cancelOrderButton.addEventListener('click', (e) => this.handleCancelOrderEvent(e));
-      let checkoutDialog = this.shadowRoot.querySelector('#checkout-dialog');
-      checkoutDialog.addEventListener('cancel', (e) => this.dialogCloseEvent(e));
-      checkoutDialog.addEventListener('close', (e) => this.dialogCloseEvent(e));
     }
 
     handlePurchaseEvent(event){
       // clone cart from sidebar
       let cart = this.shadowRoot.querySelector('.cart-table');
-      let dialogBody = this.shadowRoot.querySelector('.dialog-body');
+      let dialogBody = document.querySelector('.dialog-body');
       dialogBody.appendChild(cart.cloneNode(true));
 
-      let checkoutDialog = this.shadowRoot.querySelector('#checkout-dialog');
+      let checkoutDialog = document.querySelector('#checkout-dialog');
       checkoutDialog.showModal();
-    }
-
-    handlePlaceOrderEvent(event){
-      window.clearAllCheckedItems();
-      this.removeFromCart();
-
-      let checkoutDialog = this.shadowRoot.querySelector('#checkout-dialog');
-      checkoutDialog.close('ordered');
-    }
-
-    handleCancelOrderEvent(event){
-      let checkoutDialog = this.shadowRoot.querySelector('#checkout-dialog');
-      checkoutDialog.close('cancelled');
-    }
-
-    dialogCloseEvent(event){
-      let dialogBody = this.shadowRoot.querySelector('.dialog-body');
-      dialogBody.innerHTML = '';
     }
 
   }
