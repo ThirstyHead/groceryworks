@@ -20,7 +20,5 @@
   "dependencies": {
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
   },
-  "devDependencies": {
-    "parse5": "^5.1.0"
-  }
+  "devDependencies": {}
 }
