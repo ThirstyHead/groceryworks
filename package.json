@@ -4,8 +4,9 @@
   "description": "GroceryWorks is a fictional grocery store website.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "adddemo": "node utils/adddemo.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,7 @@
   "dependencies": {
     "dialog-polyfill": "github:googlechrome/dialog-polyfill"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "fs-extra": "^8.1.0"
+  }
 }
